@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Happy Birthday Website 2.0 | Aoudumber Bade">
+    <meta name="github" content="https://github.com/Aoudumber-Bade">
+    <title>Sünnipäev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&family=Righteous&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        @keyframes float-up-left {
+            from {
+                bottom: -150px;
+                left: 50px;
+                opacity: 1;
+            }
+            to {
+                bottom: 150px;
+                left: 50px;
+                opacity: 0.8;
+            }
+        }
+        
+        @keyframes float-up-right {
+            from {
+                bottom: -150px;
+                right: 50px;
+                opacity: 1;
+            }
+            to {
+                bottom: 150px;
+                right: 50px;
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes sway-left {
+            0%, 100% {
+                transform: rotateZ(-5deg);
+                transform-origin: top center;
+            }
+            50% {
+                transform: rotateZ(5deg);
+                transform-origin: top center;
+            }
+        }
+
+        @keyframes sway-right {
+            0%, 100% {
+                transform: rotateZ(5deg);
+                transform-origin: top center;
+            }
+            50% {
+                transform: rotateZ(-5deg);
+                transform-origin: top center;
+            }
+        }
+        
+        .balloon_one {
+            animation: float-up-left 3s ease-in-out 2s infinite !important;
+        }
+        
+        .balloon_one img {
+            animation: sway-left 2s ease-in-out infinite;
+            display: block;
+        }
+        
+        .balloon_two {
+            animation: float-up-right 3s ease-in-out 2.5s infinite !important;
+        }
+
+        .balloon_two img {
+            animation: sway-right 2s ease-in-out infinite;
+            display: block;
+        }
+
+        .card1 {
+            padding: 30px 20px !important;
+        }
+
+        .card1 .username {
+            font-size: 28px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .card1 h3 {
+            font-size: 14px !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            text-shadow: none !important;
+            color: inherit !important;
+        }
+
+        .card1 h3:last-of-type {
+            font-size: 7px !important;
+            font-weight: bold !important;
+            color: #FFD700 !important;
+            letter-spacing: 0.5px;
+        }
+
+        .Palju, .Õnne {
+            font-family: 'Righteous', cursive !important;
+        }
+
+        .username {
+            font-family: 'Righteous', cursive !important;
+        }
+
+        .card2-content {
+            text-align: center !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="flag__birthday">
+            <img src="./images/1.png" alt="" width="350" class="flag__left">
+            <img src="./images/1.png" alt="" width="350" class="flag__right">
+        </div>
+        <div class="content" style="justify-content: center; position: relative;">
+            <div class="left" style="text-align: center;">
+                <div class="title">
+                    <h1 class="Palju">
+                        <span style="--t: 4s;">P</span>
+                        <span style="--t: 4.2s;">a</span>
+                        <span style="--t: 4.4s;">l</span>
+                        <span style="--t: 4.6s;">j</span>
+                        <span style="--t: 4.8s;">u</span>
+                    </h1>
+                    <h1 class="Õnne">
+                        <span style="--t: 5s;">Õ</span>
+                        <span style="--t: 5.2s;">n</span>
+                        <span style="--t: 5.4s;">n</span>
+                        <span style="--t: 5.6s;">e</span>
+
+                    </h1>
+                    <div class="hat" style="margin-left: -40px;">
+                        <img src="./images/hat.png" alt="" width="130">
+                    </div>
+                </div>
+                <div class="date__of__birth">
+                    <span></span>
+                </div>
+                <div class="btn">
+                    <button id="btn__letter">
+                        <div class="mail">
+                            Vajuta siia!
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+            <div class="balloon_one" style="position: fixed; bottom: -150px; left: 50px;">
+                <img width="100px" src="./images/balloon1.png" alt="">
+            </div>
+            <div class="balloon_two" style="position: fixed; bottom: -150px; right: 50px;">
+                <img width="100px" src="./images/balloon2.png" alt="">
+            </div>
+        </div>
+        <div class="decorate_star star1" style="--t: 15s;"></div>
+        <div class="decorate_star star2" style="--t: 15.2s;"></div>
+        <div class="decorate_star star3" style="--t: 15.4s;"></div>
+        <div class="decorate_star star4" style="--t: 15.6s;"></div>
+        <div class="decorate_star star5" style="--t: 15.8s;"></div>
+        <div class="decorate_flower--one" style="--t: 15s;">
+            <img width="20" src="./images/decorate_flower.png" alt="">
+        </div>
+        <div class="decorate_flower--two" style="--t: 15.3s;">
+            <img width="20" src="./images/decorate_flower.png" alt="">
+        </div>
+        <div class="decorate_flower--three" style="--t: 15.6s;">
+            <img width="20" src="./images/decorate_flower.png" alt="">
+        </div>
+        <div class="decorate_bottom">
+            <img src="./images/decorate.png" alt="" width="100">
+        </div>
+
+
+        <div class="boxMail">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="boxMail-container">
+                <div class="card1">
+                    <h4 class="username">Sofife<span class="underline"></span></h4>
+
+                    <h3>PALJU ÕNNE SÜNNIPÄEVAKS!</h3>
+                    <h3 style="font-size: 7px; margin-top: 8px;">(Sulgudes, su sünnipäev on esmaspäeval...)</h3>
+                    <div class="imageCute">
+                        <img src="cute1.png" alt="">
+                    </div>
+                    <div style="display: flex; justify-content: space-around; margin-top: 15px;">
+                        <img width="60px" src="./images/balloon1.png" alt="">
+                        <img width="60px" src="./images/balloon2.png" alt="">
+                    </div>
+                    <div style="text-align: right; margin-top: 15px; font-size: 12px; color: white;">
+                        Ava kaart!
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="card2-content" style="text-align: center;">
+                        <h3>Palju-palju õnne sünnipäevaks, Sofia!</h3>
+                        <h3 style="font-size: 16px; margin-top: 12px; font-weight: normal;">(Kuigi me pole üldse kaua tuttavad, on sinust kiiresti saanud üks mu lemmikumaid inimesi.)</h3>
+
+                        <div class="imageCute2" style="margin-top: 200px;">
+                            <img src="./images/sofia.jpg" alt="Sofia" style="max-width: 150px; width: 100%; height: auto; border-radius: 10px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    let datetxt = "Sofife!";
+    let datatxtletter = "My love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
+    let titleLetter = "To you";
+    let charArrDate = datetxt.split('');
+    let charArrDateLetter = datatxtletter.split('');
+    let charArrTitle = titleLetter.split('');
+    let currentIndex = 0;
+    let currentIndexLetter = 0;
+    let currentIndexTitle = 0;
+    let date__of__birth = document.querySelector(".date__of__birth span");
+    let text__letter = document.querySelector(".text__letter p");
+    setTimeout(function () {
+        timeDatetxt = setInterval(function () {
+            if (currentIndex < charArrDate.length) {
+                date__of__birth.textContent += charArrDate[currentIndex];
+                currentIndex++;
+            }
+            else {
+                let i = document.createElement("i");
+                i.className = "fa-solid fa-star"
+                document.querySelector(".date__of__birth").prepend(i)
+                document.querySelector(".date__of__birth").appendChild(i.cloneNode(true))
+                clearInterval(timeDatetxt)
+            }
+        }, 100)
+    }, 12000)
+
+    var intervalContent;
+    var intervalTitle;
+    $("#btn__letter").on("click", function () {
+        $(".box__letter").slideDown()
+        setTimeout(function () {
+            $(".letter__border").slideDown();
+        }, 1000)
+        setTimeout(function () {
+            intervalTitle = setInterval(function () {
+                if (currentIndexTitle < charArrTitle.length) {
+                    document.querySelector(".title__letter").textContent += charArrTitle[currentIndexTitle];
+                    let i = document.createElement("i");
+                    i.className = "fa-solid fa-heart"
+                    document.querySelector(".title__letter").appendChild(i)
+                    currentIndexTitle++;
+                }
+                else {
+                    clearInterval(intervalTitle)
+                }
+            }, 100)
+        }, 2000)
+        setTimeout(function () {
+            document.querySelector("#heart__letter").classList.add("animationOp");
+            document.querySelector(".love__img").classList.add("animationOp");
+            document.querySelector("#mewmew").classList.add("animationOp");
+        }, 2800)
+        setTimeout(function () {
+            document.querySelectorAll(".heart").forEach((item) => {
+                item.classList.add("animation")
+            })
+        }, 3500)
+        setTimeout(function () {
+            intervalContent = setInterval(function () {
+                if (currentIndexLetter < charArrDateLetter.length) {
+                    text__letter.textContent += charArrDateLetter[currentIndexLetter];
+                    currentIndexLetter++;
+                }
+                else {
+                    clearInterval(intervalContent)
+                }
+            }, 50)
+        }, 6000)
+    })
+    $(".close").on("click", function () {
+        clearInterval(intervalContent)
+        document.querySelector(".title__letter").textContent = "";
+        text__letter.textContent = "";
+        currentIndexLetter = 0
+        currentIndexTitle = 0
+        document.querySelector("#heart__letter").classList.remove("animationOp");
+        document.querySelector(".love__img").classList.remove("animationOp");
+        document.querySelector("#mewmew").classList.remove("animationOp");
+        document.querySelectorAll(".heart").forEach((item) => {
+            item.classList.remove("animation")
+        })
+        $(".box__letter").slideUp();
+        $(".letter__border").slideUp();
+    })
+
+
+
+    let mailBox = document.querySelector('.mail')
+    let boxmail = document.querySelector('.boxMail')
+    var close = document.querySelector('.fa-xmark')
+    mailBox.onclick = function () {
+        mailBox.classList.toggle('active')
+        boxmail.classList.add('active')
+    }
+
+    close.addEventListener('click', function () {
+        boxmail.classList.remove('active')
+    })
+</script>
+
+</html>
